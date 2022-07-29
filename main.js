@@ -207,9 +207,9 @@ ScrollReveal({
 }).reveal(`#home, 
 #home img, 
 #home .stats, 
-#services, 
-#services header, 
-#services .card,
 #about,
 #about header,
-#about .content`);
+#about .content,
+#services, 
+#services header
+`);
