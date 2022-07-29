@@ -1,16 +1,18 @@
-window.addEventListener("scroll", onScroll);
+/* 
+window.scroll("scroll", onScroll);
 
 onScroll();
 
 function onScroll() {
   showNavOnScroll();
   showBackToTopButtonOnScroll();
-
+  
   activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(services);
   activateMenuAtCurrentSection(about);
   activateMenuAtCurrentSection(contact);
 }
+ */
 
 function activateMenuAtCurrentSection(section) {
   // linha alvo
@@ -64,7 +66,7 @@ function showBackToTopButtonOnScroll() {
   } else {
     backToTopButton.classList.remove("show");
   }
-}
+} 
 
 function openMenu() {
   document.body.classList.add("menu-expanded");
@@ -188,6 +190,7 @@ function show(beers) {
 }
 
 /* ScrollReveal JS */
+
 ScrollReveal({
   origin: "top",
   distance: "30px",
