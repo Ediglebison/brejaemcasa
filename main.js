@@ -95,6 +95,15 @@ async function getContent() {
 getContent();
 
 function show(beers) {
+  let lista = "";
+
+  for (let cerveja of beers) {
+    lista += `
+    <li><a href="#${cerveja.id}">${cerveja.id} - ${cerveja.name}</a></li>
+    `;
+  }
+  document.getElementById("indice").innerHTML = lista;
+  
   let output = "";
 
   for (let beer of beers) {
@@ -137,7 +146,7 @@ function show(beers) {
     }
     output += `
           <li><div class="wrapper">
-          <div class="col-a">
+          <div id=${beer.id} class="col-a">
               <h3>${beer.id} - ${beer.name} - ${beer.tagline} </h3><br>
               Descrição: ${beer.description}<br>
               <br>

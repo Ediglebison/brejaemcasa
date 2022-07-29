@@ -346,6 +346,19 @@ body.menu-expanded button path {
   text-align: left;
 }
 
+#services .indice ul {
+  height: 100vh;
+  display: block;
+  overflow-y: scroll;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+#services .indice li a {
+  text-decoration: none;
+  color: var(--brand-dark);
+}
+
 #services #beers .wrapper .col-a {
   text-align: justify;
 }
@@ -353,6 +366,9 @@ body.menu-expanded button path {
 #services #beers li {
   margin-bottom: 5rem;
   border-bottom: solid gray 2px;
+  list-style: none;
+  background-color: var(--brand-light);
+  padding: 5rem 2rem;
 }
 
 #services #beers .wrapper table{
@@ -620,6 +636,7 @@ footer .social-links {
   #home {
     padding-block: 0;
     padding-top: var(--nav-height);
+    padding-bottom: 7rem;
   }
 
   #home .wrapper {
@@ -643,22 +660,6 @@ footer .social-links {
     font-size: 1.8rem;
   }
 
-  #home .stats {
-    grid-area: C;
-
-    flex-direction: row;
-    padding: 6rem;
-    gap: 0;
-  }
-
-  #home .stats .stat + .stat {
-    border-left: 1px solid var(--primary-color);
-  }
-
-  #home .stats .stat {
-    flex: 1;
-  }
-
   #home .button {
     margin: 0;
   }
@@ -671,6 +672,17 @@ footer .social-links {
   #services h2 {
     width: 47rem;
     margin-inline: auto;
+  }
+  
+  #services .indice ul {
+    text-align: left;
+    column-count: 4; 
+    padding-block: 5rem;
+
+    
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
   }
 
   #services #beers .wrapper {
@@ -719,6 +731,9 @@ footer .social-links {
   }
 
   /*=====CONTACT=====*/
+  #contact {
+    background-color: var(--brand-light);
+  }
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: 'A B';
@@ -731,6 +746,7 @@ footer .social-links {
   /*=====FOOTER=====*/
   footer {
     padding-block: 8rem;
+    
   }
 
   footer .wrapper {
