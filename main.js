@@ -144,23 +144,28 @@ function show(beers) {
       </tr>
       `;
     }
+
+    let adc = "";
+    if (beer.method.twist) {
+      adc = `Adicional: ${beer.method.twist}<br>
+      <br>`;
+
+    }
     output += `
           <li><div class="wrapper">
           <div id=${beer.id} class="col-a">
               <h3>${beer.id} - ${beer.name} - ${beer.tagline} </h3><br>
               Descrição: ${beer.description}<br>
               <br>
-              abv: ${beer.abv} IBU: ${beer.ibu}<br>
-              OG: ${beer.target_og} FG: ${beer.target_fg}<br>
-              srm: ${beer.srm}<br>
+              Abv: ${beer.abv}% - IBU: ${beer.ibu}<br>
+              OG: ${beer.target_og} - FG: ${beer.target_fg}<br>
+              SRM: ${beer.srm}<br>
               <br>
               ${mash}
-              <br>
               Fermentação: ${beer.method.fermentation.temp.value}ºC<br>
               <br>
-              Adicional: ${beer.method.twist}<br>
-              <br>
-              Ingredientes:<br>
+              ${adc}
+              <h4>Ingredientes:</h4>
               Malte: 
               <table>
                 <tr>
