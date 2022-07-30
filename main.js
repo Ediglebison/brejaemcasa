@@ -154,7 +154,7 @@ function show(beers) {
     output += `
           <li><div class="wrapper">
           <div id=${beer.id} class="col-a">
-              <h3>${beer.id} - ${beer.name} - ${beer.tagline} </h3><br>
+              <h3>${beer.id} - ${beer.name} - ${beer.tagline} (20L)</h3><br>
               Descrição: ${beer.description}<br>
               <br>
               Abv: ${beer.abv}% - IBU: ${beer.ibu}<br>
