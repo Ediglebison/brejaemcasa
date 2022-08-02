@@ -78,7 +78,7 @@ function closeMenu() {
 
 //Receita
 
-const base = "./assets/beers.json";
+const base = "./assets/beers_PT.json";
 
 async function getContent() {
   try {
@@ -152,52 +152,54 @@ function show(beers) {
 
     }
     output += `
-          <li><div class="wrapper">
-          <div id=${beer.id} class="col-a">
-              <h3>${beer.id} - ${beer.name} - ${beer.tagline} (20L)</h3><br>
-              Descrição: ${beer.description}<br>
-              <br>
-              Abv: ${beer.abv}% - IBU: ${beer.ibu}<br>
-              OG: ${beer.target_og} - FG: ${beer.target_fg}<br>
-              SRM: ${beer.srm}<br>
-              <br>
-              ${mash}
-              Fermentação: ${beer.method.fermentation.temp.value}ºC<br>
-              <br>
-              ${adc}
-              <h4>Ingredientes:</h4>
-              Malte: 
-              <table>
-                <tr>
-                  <th>Nome<th>
-                  <th>Qtde(Kg)<th>
-                </tr>
-                ${malte}
-              </table>
-              <br>
-              Lupulo: 
-              
-              <table>
-                <tr>
-                  <th>Nome<th>
-                  <th>Qtde(g)<th>
-                  <th>Tempo<th>
-                  <th>Atributo<th>
-                </tr>
-                ${lup}
-              </table>
-              <br>
-              Levedura: ${beer.ingredients.yeast}<br>
-              <br>
-              Harmonização: ${beer.food_pairing}<br>
-              <br>
-              Dica: ${beer.brewers_tips}<br>
-              <br>
-          </div>
-          <div class="col-b">
-              <img src=${beer.image_url}><br>
-          </div>
-      </div></li>
+    <li>
+      <div class="wrapper">
+        <div id=${beer.id} class="col-a">
+          <h3>${beer.id} - ${beer.name} - ${beer.tagline} (20L)</h3><br>
+          Descrição: ${beer.description}<br>
+          <br>
+          Abv: ${beer.abv}% - IBU: ${beer.ibu}<br>
+          OG: ${beer.target_og} - FG: ${beer.target_fg}<br>
+          SRM: ${beer.srm}<br>
+          <br>
+          ${mash}
+          Fermentação: ${beer.method.fermentation.temp.value}ºC<br>
+          <br>
+          ${adc}
+          <h4>Ingredientes:</h4>
+          Malte: 
+          <table>
+            <tr>
+              <th>Nome<th>
+              <th>Qtde(Kg)<th>
+            </tr>
+            ${malte}
+          </table>
+          <br>
+          Lupulo: 
+          
+          <table>
+            <tr>
+              <th>Nome<th>
+              <th>Qtde(g)<th>
+              <th>Tempo<th>
+              <th>Atributo<th>
+            </tr>
+            ${lup}
+          </table>
+          <br>
+          Levedura: ${beer.ingredients.yeast}<br>
+          <br>
+          Harmonização: ${beer.food_pairing}<br>
+          <br>
+          Dica: ${beer.brewers_tips}<br>
+          <br>
+        </div>
+        <div class="col-b">
+          <img src=${beer.image_url}><br>
+        </div>
+      </div>
+    </li>
       `;
   }
   document.getElementById("beers").innerHTML = output;
